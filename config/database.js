@@ -1,8 +1,13 @@
 const { parse } = require("pg-connection-string");
 
 module.exports = ({ env }) => {
-  const { host, port, database, user, password } = parse(env("DATABASE_URL"));
+  var { host, port, database, user, password } = parse(env("DATABASE_URL"));
 
+  if(port==null){
+    port = 5432
+  }
+
+  console.log({ host, port, database, user, password })
   return {
     connection: {
       client: "postgres",
@@ -11,7 +16,7 @@ module.exports = ({ env }) => {
         port,
         database,
         user,
-        password
+        password,
       },
       debug: false,
     },
