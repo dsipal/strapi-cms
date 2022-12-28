@@ -4,14 +4,14 @@ services:
     env: node
     plan: free
     buildCommand: yarn install && yarn build
-    startCommand: yarn start
+    startCommand: yarn develop
     healthCheckPath: /_health
     autoDeploy: false
     envVars:
       - key: NODE_VERSION
         value: ~16.13.0
       - key: NODE_ENV
-        value: production
+        value: development
       - key: CLOUDINARY_NAME
         sync: false
       - key: CLOUDINARY_KEY
