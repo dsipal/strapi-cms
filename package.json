@@ -15,10 +15,9 @@
     "@strapi/plugin-users-permissions": "^4.5.4",
     "@strapi/provider-upload-cloudinary": "^4.5.4",
     "@strapi/strapi": "^4.5.4",
-    "parse-database-url": "^0.3.0",
     "pg": "^8.7.0",
     "pg-connection-string": "^2.5.0",
-    "sqlite3": "latest"
+    "sqlite3": "^5.1.4"
   },
   "author": {
     "name": "A Strapi developer"

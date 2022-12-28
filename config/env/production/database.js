@@ -6,8 +6,7 @@ module.exports = ({ env }) => {
   if(port==null){
     port = 5432
   }
-
-  console.log({ host, port, database, user, password })
+  
   return {
     connection: {
       client: "postgres",
