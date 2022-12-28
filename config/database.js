@@ -1,11 +1,21 @@
-const path = require('path');
+// strapi-cms/config/database.js
+var parseDbUrl = require("parse-database-url")
+var dbConfig = parseDbUrl(process.env["DATABASE_URL"])
 
 module.exports = ({ env }) => ({
   connection: {
-    client: 'sqlite',
+    client: 'postgres',
     connection: {
-      filename: path.join(__dirname, '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+      host: dbConfig.host,
+      port: dbConfig.port,
+      database: dbConfig.database,
+      user: dbConfig.user,
+      password: dbConfig.password,
+      schema: dbConfig.schema, // Not required
+      ssl: {
+        rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
+      },
     },
-    useNullAsDefault: true,
+    debug: false,
   },
 });
