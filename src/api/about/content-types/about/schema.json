@@ -4,33 +4,35 @@
   "info": {
     "singularName": "about",
     "pluralName": "abouts",
-    "displayName": "About"
+    "displayName": "About",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Header": {
+    "header": {
       "type": "string"
     },
-    "Body": {
+    "body": {
       "type": "richtext"
     },
-    "Image": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "Github": {
+    "github": {
       "type": "string"
     },
-    "LinkedIn": {
+    "linkedIn": {
       "type": "string"
     }
   }
