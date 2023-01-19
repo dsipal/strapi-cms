@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_ui_current_positions",
+  "info": {
+    "displayName": "currentPosition"
+  },
+  "options": {},
+  "attributes": {
+    "companyTitle": {
+      "type": "string"
+    },
+    "positionTitle": {
+      "type": "string"
+    },
+    "since": {
+      "type": "date"
+    },
+    "companyLink": {
+      "type": "string"
+    }
+  }
+}
