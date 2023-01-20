@@ -1,24 +1,18 @@
 {
   "collectionName": "components_about_teches",
   "info": {
-    "displayName": "tech"
+    "displayName": "tech",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "name": {
       "type": "string"
     },
-    "icon": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "link": {
+      "type": "string"
+    },
+    "icon": {
       "type": "string"
     }
   }
