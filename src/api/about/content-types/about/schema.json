@@ -38,9 +38,6 @@
     "resumeUrl": {
       "type": "string"
     },
-    "skills": {
-      "type": "json"
-    },
     "currentlyWorkingOn": {
       "type": "string"
     },
@@ -48,7 +45,19 @@
       "displayName": "currentPosition",
       "type": "component",
       "repeatable": false,
-      "component": "ui.current-position"
+      "component": "about.current-position"
+    },
+    "skills": {
+      "displayName": "skills",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.skills"
+    },
+    "tech": {
+      "displayName": "tech",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.tech"
     }
   }
 }
