@@ -13,15 +13,8 @@
       "type": "richtext"
     },
     "icon": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "type": "customField",
+      "customField": "plugin::fontawesome-strapi.icon"
     }
   }
 }

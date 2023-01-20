@@ -13,7 +13,8 @@
       "type": "string"
     },
     "icon": {
-      "type": "string"
+      "type": "customField",
+      "customField": "plugin::fontawesome-strapi.icon"
     }
   }
 }
