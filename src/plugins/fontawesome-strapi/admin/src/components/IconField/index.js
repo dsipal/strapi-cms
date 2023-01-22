@@ -19,16 +19,13 @@ const label_dict = {
   "fab": "fa-brands",
   "far": "fa-regular"
 }
-
 sources.forEach(source => {
   library.add(source)
 })
 
-//function to generate icon string from icon
+//generates the string that was stored 
 const getIconString = (icon) => {
-  const label = label_dict[icon.prefix]
-  const iconName = icon.iconName
-  return String(`${label} ${iconName}`)
+  return String(`${label_dict[icon.prefix]} ${icon.iconName}`)
 }
 
 const arrayFromSource = (source) => {
@@ -77,19 +74,20 @@ const Field = ({
   const [totalPages, setTotalPages] = useState(0)
 
   useEffect(() => {
-    const startIndex = (currentPage - 1) * itemsPerPage
-    const endIndex = startIndex + itemsPerPage
     const iconsArray = Object.entries(iconList)
     .filter(([key,icon]) => {
       if (icon.string.includes(value)) {
         return true
       }
     }).sort()
+
+    const startIndex = (currentPage - 1) * itemsPerPage
+    const endIndex = startIndex + itemsPerPage
     const iconsToDisplay = iconsArray.slice(startIndex, endIndex)
     setIconsToDisplay(iconsToDisplay)
     const totalPages = Math.ceil(iconsArray.length / itemsPerPage)
     setTotalPages(totalPages)
-  }, [currentPage, itemsPerPage, iconList, value]);
+  }, [currentPage, itemsPerPage, iconList, value])
   
   const handleChange = useCallback((e, newValue) => {
     onChange({target: { name, value: e.target.value || newValue, type: "string"}})
@@ -114,7 +112,6 @@ const Field = ({
         <SearchForm>
           <Box>
             <Typography>Current Icon: </Typography>
-            {/* <FontAwesomeIcon icon={value} size="2x" inverse></FontAwesomeIcon> */}
             <CurrentIcon value={value} />
           </Box>
           <Searchbar
