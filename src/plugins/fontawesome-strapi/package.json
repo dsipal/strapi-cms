@@ -1,12 +1,12 @@
 {
   "name": "fontawesome-strapi",
   "version": "0.1.0",
-  "description": "Custom field that lets you select a fontawesome icon",
+  "description": "Custom field that lets you select a fontawesome icon.",
   "strapi": {
     "name": "fontawesome-strapi",
-    "description": "Description of Fontawesome Strapi plugin",
+    "description": "Custom field that lets you select a fontawesome icon.",
     "kind": "plugin",
-    "displayName": "Fontawesome Strapi"
+    "displayName": "fontawesome-strapi"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -20,11 +20,6 @@
   "author": {
     "name": "Devin S"
   },
-  "maintainers": [
-    {
-      "name": "Devin S"
-    }
-  ],
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"

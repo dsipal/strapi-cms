@@ -1,8 +1,8 @@
 {
-  "name": "strapi-postgres-cloudinary",
+  "name": "portfolio-cms",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "A CMS for a portfolio.",
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",
@@ -20,7 +20,7 @@
     "sqlite3": "^5.1.4"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Devin S"
   },
   "strapi": {
     "uuid": "5dbc738b-6a52-4a78-a46c-eed70aa61c15"
@@ -30,7 +30,7 @@
     "npm": ">=6.0.0"
   },
   "workspaces": [
-    "plugins/*"
+    "src/plugins/*"
   ],
   "license": "MIT"
 }
