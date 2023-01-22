@@ -32,7 +32,6 @@ const getIconString = (icon) => {
 }
 
 const arrayFromSource = (source) => {
-  console.log("making array from source")
   return Object.values(source).map((icon) => {
     return {
       "icon": icon, 
