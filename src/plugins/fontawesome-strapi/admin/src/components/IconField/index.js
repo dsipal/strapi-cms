@@ -11,8 +11,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useIntl } from 'react-intl';
 
-config.autoAddCss = false
-
+//init icon packs
 const sources = [fas,fab,far]
 const label_dict = {
   "fas": "fa-solid",
@@ -23,11 +22,12 @@ sources.forEach(source => {
   library.add(source)
 })
 
-//generates the string that was stored 
+//generates the string that is stored 
 const getIconString = (icon) => {
   return String(`${label_dict[icon.prefix]} ${icon.iconName}`)
 }
 
+//formats source into an array with required values
 const arrayFromSource = (source) => {
   return Object.values(source).map((icon) => {
     return {
@@ -39,8 +39,7 @@ const arrayFromSource = (source) => {
   })
 }
 
-//function to create new single array from all
-//entries in sources with icon object as key and iconString as value
+//makes an array out of all icon sources
 const makeList = (sources) => {
   let x = []
   sources.forEach(source => {
@@ -50,6 +49,7 @@ const makeList = (sources) => {
   return x
 }
 
+//element to display current icon & handle errors
 const CurrentIcon = (value) => {
   if (typeof value.value === "string" && value.value.split(" ").length === 2) {
     const [prefix, iconName] = value.value.split(" ");
