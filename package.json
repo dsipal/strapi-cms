@@ -26,7 +26,7 @@
     "uuid": "5dbc738b-6a52-4a78-a46c-eed70aa61c15"
   },
   "engines": {
-    "node": ">=18.0.0",
+    "node": "18.16.1",
     "npm": ">=6.0.0"
   },
   "workspaces": [
