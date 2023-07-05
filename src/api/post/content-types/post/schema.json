@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post"
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,12 @@
       "type": "text"
     },
     "cover": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "published_date": {
       "type": "datetime"
@@ -42,6 +41,14 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "posts"
+    },
+    "postHero": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
